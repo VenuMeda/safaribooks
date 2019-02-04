@@ -609,7 +609,7 @@ class SafariBooks:
         if len(stylesheet_links):
             stylesheet_count = 0
             for s in stylesheet_links:
-                css_url = urljoin("https:", s.attrib["href"]) if s.attrib["href"][:2] == "//" \
+                css_url = urljoin("http:", s.attrib["href"]) if s.attrib["href"][:2] == "//" \
                     else urljoin(self.base_url, s.attrib["href"])
 
                 if css_url not in self.css:
